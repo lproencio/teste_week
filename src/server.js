@@ -22,7 +22,7 @@ mongoose.connect('mongodb+srv://testes:testes@matilha-jeeh9.mongodb.net/week?ret
     }
 );
 
-app.use((req, res) => {
+app.use((req, res,next) => {
     req.io;
 
     return next();
