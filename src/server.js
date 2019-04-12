@@ -22,8 +22,8 @@ mongoose.connect('mongodb+srv://testes:testes@matilha-jeeh9.mongodb.net/week?ret
     }
 );
 
-app.use((req, res,next) => {
-    req.io;
+app.use((req, res, next) => {
+    req.io=io;
 
     return next();
 });
@@ -34,4 +34,4 @@ app.use("/files", express.static(path.resolve(__dirname, "..", "tmp")));
 
 app.use(require('./routes'));
 
-app.listen(process.env.PORT || 3333);
+server.listen(process.env.PORT || 3333);
