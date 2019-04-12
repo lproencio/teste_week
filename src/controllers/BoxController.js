@@ -1,6 +1,10 @@
 const Box = require('../models/Box');
 
 class BoxController {
+    async home(req, res){
+        return res.send('==+ OK +==')
+    }
+
     async store(req, res) {
         
         const box = await Box.create( req.body.title );
